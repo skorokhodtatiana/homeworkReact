@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.App{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hero-card{
+    width: 30vw;
+    background-color: aquamarine;
+    margin: 4px;
+    text-align: start;
+   padding-left: 8px;
+}
+
+.hero-character{
+    font-family: Lobster;
+}
+
+.hero-img-wrapper{
+    width: 30vw;
+    height: 50vh;
+}
+
+.hero-img{
+    max-width: 100%;
+    max-height: 100%;
+}
