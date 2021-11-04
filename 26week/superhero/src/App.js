@@ -12,8 +12,6 @@ const heros = [
   {character:"Тор", universe:"Marvel Comics", name:"Тор Одинсон", career:"борец за справедливость, скандинавский бог", friends:"Мстители", url:"https://kvmarvel.ru/wp-content/uploads/2019/03/gladiator-thor-deluxe-version.png"}
 ];
 
-
-
 class App extends React.Component {
   render(){
   return (
