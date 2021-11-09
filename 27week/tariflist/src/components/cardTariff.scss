@@ -1,0 +1,91 @@
+.card {
+  display: inline;
+  width: 13rem;
+  height: 50vh;
+  border: 1px solid white;
+
+  .card__header {
+    text-align: center;
+    margin-bottom: 1px;
+    height: 3rem;
+    line-height: 3rem;
+    color: white;
+  }
+
+  .card__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    color: white;
+    height: 7rem;
+
+    .card__currency {
+      font-size: 0.8rem;
+      line-height: 5rem;
+    }
+
+    .card__price {
+      font-size: 2rem;
+      line-height: 7rem;
+    }
+
+    .card__period {
+      font-size: 0.8rem;
+      line-height: 9rem;
+    }
+  }
+
+  .card__speed {
+    background-color: rgba(192, 192, 192, 0.5);
+    color: rgba(105, 105, 105, 1);
+    height: 3.5rem;
+    text-align: center;
+    line-height: 3.5rem;
+  }
+
+  .card__footer {
+    font-size: 1rem;
+    background-color: rgba(169, 169, 169, 0.8);
+    color: rgba(105, 105, 105, 1);
+    height: 4rem;
+    text-align: center;
+    line-height: 1.6rem;
+  }
+}
+
+.selected {
+  transform: scale(1.1);
+}
+
+.card--blueHeader {
+  background-color: rgba(34, 113, 179, 1);
+}
+
+.card--blueMain {
+  background-color: rgba(34, 113, 179, 0.8);
+}
+
+.card--greenHeader {
+  background-color: rgba(60, 179, 113, 1);
+}
+
+.card--greenMain {
+  background-color: rgba(60, 179, 113, 0.8);
+}
+
+.card--redHeader {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.card--redMain {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.card--blackHeader {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.card--blackMain {
+  background-color: rgba(0, 0, 0, 0.8);
+}

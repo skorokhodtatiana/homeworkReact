@@ -1,0 +1,99 @@
+.card {
+  display: inline;
+  width: 13rem;
+  height: 50vh;
+  border: 1px solid white;
+}
+
+.card .card__header {
+  text-align: center;
+  margin-bottom: 1px;
+  height: 3rem;
+  line-height: 3rem;
+  color: white;
+}
+
+.card .card__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  height: 7rem;
+}
+
+.card .card__main .card__currency {
+  font-size: 0.8rem;
+  line-height: 5rem;
+}
+
+.card .card__main .card__price {
+  font-size: 2rem;
+  line-height: 7rem;
+}
+
+.card .card__main .card__period {
+  font-size: 0.8rem;
+  line-height: 9rem;
+}
+
+.card .card__speed {
+  background-color: rgba(192, 192, 192, 0.5);
+  color: dimgray;
+  height: 3.5rem;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.card .card__footer {
+  font-size: 1rem;
+  background-color: rgba(169, 169, 169, 0.8);
+  color: dimgray;
+  height: 4rem;
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+.selected {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card--blueHeader {
+  background-color: #2271b3;
+}
+
+.card--blueMain {
+  background-color: rgba(34, 113, 179, 0.8);
+}
+
+.card--greenHeader {
+  background-color: mediumseagreen;
+}
+
+.card--greenMain {
+  background-color: rgba(60, 179, 113, 0.8);
+}
+
+.card--redHeader {
+  background-color: red;
+}
+
+.card--redMain {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.card--blackHeader {
+  background-color: black;
+}
+
+.card--blackMain {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/*# sourceMappingURL=cardTariff.css.map */
