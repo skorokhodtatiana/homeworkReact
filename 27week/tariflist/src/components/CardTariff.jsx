@@ -1,22 +1,19 @@
+import React, { useState } from "react";
 import "./cardTariff.scss";
 
 const CardTariff = (props) => {
-  const {
-    id,
-    name,
-    currency,
-    price,
-    period,
-    speed,
-    isSelected,
-    color,
-    colorMain,
-  } = props;
+  const [select, setselect] = useState(false);
+  const { id, name, currency, price, period, speed, color, colorMain } = props;
 
-  const thisSelected = isSelected ? "selected" : "";
+  // const thisSelected = isSelected ? "selected" : "";
+  const handleClick = () => {
+    setselect(!select);
+  };
+
+  const thisSelected = select ? "selected" : "";
 
   return (
-    <div className={"card " + thisSelected} key={id}>
+    <div className={"card " + thisSelected} key={id} onClick={handleClick}>
       <header className={"card__header " + color}>{name}</header>
       <main className={"card__main " + colorMain}>
         <section className="card__currency">{currency}</section>
