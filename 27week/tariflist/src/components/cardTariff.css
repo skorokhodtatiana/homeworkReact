@@ -65,35 +65,35 @@
           transform: scale(1.1);
 }
 
-.card--blueHeader {
+.blueCard {
   background-color: #2271b3;
 }
 
-.card--blueMain {
+.blueMain {
   background-color: rgba(34, 113, 179, 0.8);
 }
 
-.card--greenHeader {
+.greenCard {
   background-color: mediumseagreen;
 }
 
-.card--greenMain {
+.greenMain {
   background-color: rgba(60, 179, 113, 0.8);
 }
 
-.card--redHeader {
+.redCard {
   background-color: red;
 }
 
-.card--redMain {
+.redMain {
   background-color: rgba(255, 0, 0, 0.8);
 }
 
-.card--blackHeader {
+.blackCard {
   background-color: black;
 }
 
-.card--blackMain {
+.blackMain {
   background-color: rgba(0, 0, 0, 0.8);
 }
 /*# sourceMappingURL=cardTariff.css.map */

@@ -9,7 +9,8 @@ const tariffs = [
     price: "300",
     period: "/мес",
     speed: "до 10 Мбит/сек",
-    colorBlue: true,
+    color: "blueCard",
+    colorMain: "blueMain",
   },
   {
     id: 2,
@@ -18,7 +19,8 @@ const tariffs = [
     price: "450",
     period: "/мес",
     speed: "до 50 Мбит/сек",
-    colorGreen: true,
+    color: "greenCard",
+    colorMain: "greenMain",
   },
   {
     id: 3,
@@ -28,7 +30,8 @@ const tariffs = [
     period: "/мес",
     speed: "до 100 Мбит/сек",
     isSelected: true,
-    colorRed: true,
+    color: "redCard",
+    colorMain: "redMain",
   },
   {
     id: 4,
@@ -37,7 +40,8 @@ const tariffs = [
     price: "1000",
     period: "/мес",
     speed: "до 200 Мбит/сек",
-    colorBlack: true,
+    color: "blackCard",
+    colorMain: "blackMain",
   },
 ];
 
@@ -53,10 +57,8 @@ function App() {
           period={tariff.period}
           speed={tariff.speed}
           isSelected={tariff.isSelected}
-          colorBlue={tariff.colorBlue}
-          colorGreen={tariff.colorGreen}
-          colorRed={tariff.colorRed}
-          colorBlack={tariff.colorBlack}
+          color={tariff.color}
+          colorMain={tariff.colorMain}
         ></CardTariff>
       ))}
     </div>
