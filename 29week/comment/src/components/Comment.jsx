@@ -5,43 +5,45 @@ const Comment = (props) => {
   const { allMessages, newMessage } = props;
 
   const [listMessages, setlistMessages] = useState(allMessages);
-  const allListComment = [];
+  const [newChangeMessages, setnewChangeMessages] = useState(newMessage);
+  const [divListComment, setdivListComment] = useState("");
+
   useEffect(() => {
-    console.log("хук работает");
-    const getallMessageJson = localStorage.getItem("allComment");
+    const getallMessageJson = localStorage.getItem("comment");
     console.log(getallMessageJson);
     if (getallMessageJson) {
       const getallMessage = JSON.parse(getallMessageJson);
       setlistMessages(getallMessage);
+      console.log(getallMessage);
+      let list = getallMessage.join(" ");
+      setdivListComment(list);
     }
   }, []);
 
-  const [newChangeMessages, setnewChangeMessages] = useState(newMessage);
   const setToLocalStorage = (e) => {
     e.preventDefault();
-    allListComment.push(listMessages, newChangeMessages);
-    console.log(allListComment);
-
-    let allCommentsJson = JSON.stringify(allListComment);
-    console.log(allCommentsJson);
+    listMessages.push(newChangeMessages);
+    setnewChangeMessages("");
+    let allCommentsJson = JSON.stringify(listMessages);
     localStorage.setItem("comment", allCommentsJson);
   };
 
   const handleChange = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
 
     setnewChangeMessages(e.target.value);
   };
 
   return (
-    <div>
+    <div className="wrapperForm">
       <h2>Hi</h2>
       <h2>How are you?</h2>
-      <div className="placeForComment"> {allMessages}</div>
+      <div className="placeForComment">{divListComment}</div>
       <form>
         <textarea
+          className="textArea"
           onBlur={(e) => handleChange(e)}
+          placeholder="Write your comment here"
           name="value"
           rows="10"
           cols="10"
