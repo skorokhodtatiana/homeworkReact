@@ -15,7 +15,7 @@ const Comment = (props) => {
       const getallMessage = JSON.parse(getallMessageJson);
       setlistMessages(getallMessage);
       console.log(getallMessage);
-      let list = getallMessage.join(" ");
+      let list = getallMessage.reverse().join(" ");
       setdivListComment(list);
     }
   }, [newChangeMessages]);
