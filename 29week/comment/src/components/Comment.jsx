@@ -47,7 +47,7 @@ const Comment = (props) => {
           name="value"
           rows="10"
           cols="10"
-          value={newMessage}
+          value={newChangeMessages}
         ></textarea>
         <button onClick={(e) => setToLocalStorage(e)} type="submit">
           Send
