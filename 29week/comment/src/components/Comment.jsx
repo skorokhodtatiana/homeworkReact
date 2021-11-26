@@ -2,35 +2,40 @@ import React, { useEffect, useState } from "react";
 import "./_component.scss";
 
 const Comment = (props) => {
-  const { allMessages, newMessage } = props;
+  // const { allMessages, newMessage } = props;
 
-  const [listMessages, setlistMessages] = useState(allMessages);
-  const [newChangeMessages, setnewChangeMessages] = useState(newMessage);
+  const [listMessages, setlistMessages] = useState("");
+  const [newChangeMessages, setnewChangeMessages] = useState("");
   const [divListComment, setdivListComment] = useState("");
 
   useEffect(() => {
     const getallMessageJson = localStorage.getItem("comment");
-    console.log(getallMessageJson);
     if (getallMessageJson) {
       const getallMessage = JSON.parse(getallMessageJson);
       setlistMessages(getallMessage);
-      console.log(getallMessage);
       let list = getallMessage.reverse().join(" ");
       setdivListComment(list);
+    } else {
+      setdivListComment(" ");
     }
   }, [newChangeMessages]);
 
   const setToLocalStorage = (e) => {
     e.preventDefault();
-    listMessages.push(newChangeMessages);
-    setnewChangeMessages("");
-    let allCommentsJson = JSON.stringify(listMessages);
-    localStorage.setItem("comment", allCommentsJson);
+    let emptyArr = [];
+    if (listMessages) {
+      emptyArr = [...listMessages];
+      emptyArr.push(newChangeMessages);
+    } else {
+      emptyArr = [newChangeMessages];
+    }
+    let newChangeMessagesJson = JSON.stringify(emptyArr);
+    setnewChangeMessages(" ");
+    localStorage.setItem("comment", newChangeMessagesJson);
   };
 
   const handleChange = (e) => {
     e.preventDefault();
-
     setnewChangeMessages(e.target.value);
   };
 
@@ -47,8 +52,10 @@ const Comment = (props) => {
           name="value"
           rows="10"
           cols="10"
-          value={newChangeMessages}
-        ></textarea>
+          // value=
+        >
+          {newChangeMessages}
+        </textarea>
         <button onClick={(e) => setToLocalStorage(e)} type="submit">
           Send
         </button>
