@@ -18,7 +18,7 @@ const Comment = (props) => {
       let list = getallMessage.join(" ");
       setdivListComment(list);
     }
-  }, []);
+  }, [newChangeMessages]);
 
   const setToLocalStorage = (e) => {
     e.preventDefault();
