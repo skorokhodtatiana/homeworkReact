@@ -1,0 +1,44 @@
+.block {
+  max-width: 1024px;
+}
+
+.block__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.block__title {
+  margin: 0;
+}
+
+.block__counter {
+  margin-bottom: 20px;
+}
+
+.block__button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+}
+
+.block__button--red {
+  background-color: red;
+}
+
+.block__button--green {
+  background-color: green;
+}
+
+.block__button--blue {
+  background-color: blue;
+}
+
+.block__button--aqua {
+  background-color: aqua;
+}
+/*# sourceMappingURL=styles.css.map */

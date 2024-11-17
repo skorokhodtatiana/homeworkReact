@@ -1,0 +1,43 @@
+.block {
+	max-width: 1024px;
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 28px;
+	}
+
+	&__title {
+		margin: 0;
+	}
+
+	&__counter {
+		margin-bottom: 20px;
+	}
+
+	&__button {
+		padding: 10px 20px;
+		border: none;
+		border-radius: 8px;
+
+		&--red {
+			background-color: red;
+		}
+
+		&--green {
+			background-color: green;
+		}
+
+		&--blue {
+			background-color: blue;
+		}
+
+		&--aqua {
+			background-color: aqua;
+		}
+	}
+}
+
+.block-dark {
+	background-color: black;
+}
