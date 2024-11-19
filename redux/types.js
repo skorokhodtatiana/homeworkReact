@@ -1,7 +1,7 @@
-export const increment = 'increment';
+export const INCREMENT = 'increment';
 
-export const decrement = 'decrement';
+export const DECREMENT = 'decrement';
 
-export const async = 'async';
+export const ASYNC = 'async';
 
-export const changeTopic = 'change-topic';
+export const CHANGETOPIC = 'change-topic';

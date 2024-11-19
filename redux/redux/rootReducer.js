@@ -1,11 +1,13 @@
-import { increment, decrement } from '../types.js';
+import { INCREMENT, DECREMENT, ASYNC } from '../types.js';
 
 export const rootReducer = (state, action) => {
 	switch (action.type) {
-		case increment:
+		case INCREMENT:
 			return state + 1;
-		case decrement:
+		case DECREMENT:
 			return state - 1;
+		case ASYNC:
+			return state + 1;
 		default: state
 	}
 
