@@ -1,9 +1,19 @@
-import "./App.scss";
-import Button from "./Button.js";
+import './App.scss';
+import Button from './Button.js';
+import { increment, decrement } from './redux/counterSlice.js';
+import { useDispatch, useSelector } from 'react-redux';
 
-function App() {
-	const showBunnon = (e) => {
-		console.log(e.current.target)
+const App = () => {
+	const dispatch = useDispatch();
+	const state = useSelector(state => state.counter);
+	console.log(state);
+
+	const getIncrement = () => {
+		dispatch(increment(state));
+	}
+
+	const getDecrement = () => {
+		dispatch(decrement(state));
 	}
 
 	return (
@@ -14,11 +24,11 @@ function App() {
 					<button className="block__button block__button--aqua js-change-topic">Сменить тему</button>
 				</div>
 				<div>
-					<div className="block__counter">Counter: </div>
+					<div className="block__counter">Counter: {state} </div>
 					<div className="block">
-						<Button nameButton="Добавить" className="block__button--green" handleClick={(e) => showBunnon(e)}></Button>
-						<Button nameButton="Убрать" className="block__button--red" handleClick={(e) => showBunnon(e)}></Button>
-						<Button nameButton="Async" className="block__button--blue" handleClick={(e) => showBunnon(e)}></Button>
+						<Button nameButton="Добавить" className="block__button--green" handleClick={getIncrement}></Button>
+						<Button nameButton="Убрать" className="block__button--red" handleClick={getDecrement}></Button>
+						<Button nameButton="Async" className="block__button--blue"></Button>
 					</div>
 				</div>
 			</div>
