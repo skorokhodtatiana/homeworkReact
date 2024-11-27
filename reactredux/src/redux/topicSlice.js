@@ -4,15 +4,18 @@ const topicSlice = createSlice({
 	name: 'topic',
 	initialState: 'white',
 	reducers: {
-		changeWhite(state, action) {
-
+		changeTopic(state, action) {
+			if (state === 'white') {
+				console.log(state)
+				return state = 'black';
+			} else {
+				console.log(state)
+				return state = 'white';
+			}
 		},
-		changeBlack() {
-
-		}
 	}
 })
 
-export const {changeWhite, changeBlack} = topicSlice.actions;
+export const {changeTopic} = topicSlice.actions;
 
 export default topicSlice.reducer;

@@ -41,6 +41,21 @@
 	}
 }
 
-// .block-dark {
-// 	background-color: black;
-// }
+.black {
+	background-color: black;
+
+	.block {
+
+		&__button {
+			color: black;
+		}
+
+		&__head {
+			color: white;
+		}
+
+		&__counter {
+			color: white;
+		}
+	}
+}

@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import './App.scss';
 import Button from './Button.js';
 import { increment, decrement } from './redux/counterSlice.js';
 import { useDispatch, useSelector } from 'react-redux';
+import { changeTopic } from './redux/topicSlice.js';
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -16,12 +18,18 @@ const App = () => {
 		dispatch(decrement(state));
 	}
 
+	const stateTopic = useSelector(state => state.topic)
+
+	const getTopic = () => {
+		dispatch(changeTopic(stateTopic));
+	}
+
 	return (
 		<>
-			<div className="block block-dark">
+			<div className={'block ' + stateTopic}>
 				<div className="block__head">
 					<h1 className="block__title">Redux</h1>
-					<button className="block__button block__button--aqua js-change-topic">Сменить тему</button>
+					<Button nameButton="Сменить тему" className="block__button--aqua" handleClick={getTopic}></Button>
 				</div>
 				<div>
 					<div className="block__counter">Counter: {state} </div>
