@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.scss';
 import Button from './Button.js';
-import { increment, decrement } from './redux/counterSlice.js';
+import { increment, decrement, fetchData } from './redux/counterSlice.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTopic } from './redux/topicSlice.js';
 
@@ -9,6 +9,10 @@ const App = () => {
 	const dispatch = useDispatch();
 	const state = useSelector(state => state.counter);
 	console.log(state);
+
+	useEffect(() => {
+		dispatch(fetchData())
+	}, [dispatch])
 
 	const getIncrement = () => {
 		dispatch(increment(state));
